@@ -45,3 +45,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #devise for authentication
 gem "devise"
+#HAML for better HTML
+gem 'haml-rails'
+#bootstrap sass for better design
+gem 'bootstrap-sass'
