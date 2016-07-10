@@ -49,3 +49,5 @@ gem "devise"
 gem 'haml-rails'
 #bootstrap sass for better design
 gem 'bootstrap-sass'
+#material design for bootstrap
+gem 'bootstrap-material-design'
