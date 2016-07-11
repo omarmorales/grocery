@@ -54,12 +54,18 @@ $light-blue: #3498DB;
 .big-padding{
 	padding: 2em;
 }
+.large-padding{
+	padding: 5px 10px;
+}
 .no-padding{
 	padding: 0;
 }
 //margins
 .top-space{
 	margin-top: 1em;
+}
+.bottom-space{
+	margin-bottom: 2em;
 }
 //alignment
 .no-float{
