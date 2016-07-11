@@ -55,3 +55,5 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 #material design for bootstrap
 gem 'bootstrap-material-design'
+#Paperclip for upload images 
+gem 'paperclip'
