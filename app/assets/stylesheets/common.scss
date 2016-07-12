@@ -6,8 +6,19 @@ $other-grey: #E7ECEE;
 $blue: #058CC5;
 $red: #d2527f;
 $light-blue: #3498DB;
+$teal: #009688;
 
+//text
+.bold{
+	font-weight: bold;
+}
 //colors
+.teal{
+	background-color: $teal;
+}
+.teal-text{
+	color: $teal;
+}
 .white{
 	background-color: white;
 }
@@ -75,6 +86,7 @@ $light-blue: #3498DB;
 	float: none !important;
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: -4px;
 }
 .absolute{
 	position: absolute;
@@ -91,6 +103,9 @@ $light-blue: #3498DB;
 }
 .medium{
 	font-size: 1.5em;
+}
+.normal{
+	font-size: 1.2em;
 }
 .small{
 	font-size: 12px;
