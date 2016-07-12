@@ -1,16 +1,16 @@
 .col-lg-7.col-md-8-col-xs12.col-sm-11.no-float.center-block
 	%article.card.big-padding
 		%header
-			%h1.grey-text.bold = @product.name
+			%h1.grey-text.bold= @product.name
 		%section
 			.col-xs-6.col-md-5.no-padding.inline-block
-				TO DO
+				=image_tag @product.avatar.url
 			.col-md-1.inline-block.hidden-xs
 			.col-xs-5.col-md-6.inline-block.text-left
-				%h3.blue-text.bold.normal = @product.user.email
+				%h3.blue-text.bold.normal= @product.user.email
 				%h3.teal-text.bold.normal
 					Precio:
-					%span.grey-text = "$#{@product.pricing}"
+					%span.grey-text= "$#{@product.pricing}"
 				%h3.teal-text.bold.normal
 					Archivos:
 					%span.grey-text 20
