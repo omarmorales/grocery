@@ -38,6 +38,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    annotate (2.7.1)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 12.0)
     arel (7.0.0)
     autoprefixer-rails (6.3.3.1)
       execjs
@@ -121,6 +124,10 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    paypal-sdk-rest (1.4.7)
+      multi_json (~> 1.0)
+      uuidtools (~> 2.1)
+      xml-simple
     pkg-config (1.1.7)
     puma (3.4.0)
     rack (2.0.1)
@@ -205,6 +212,7 @@ GEM
       tzinfo (>= 1.0.0)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    uuidtools (2.1.5)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (3.3.1)
@@ -215,11 +223,13 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    xml-simple (1.1.5)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  annotate
   bootstrap-material-design
   bootstrap-sass
   byebug
@@ -230,6 +240,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   paperclip
+  paypal-sdk-rest
   puma (~> 3.0)
   rails (~> 5.0.0)
   rails-controller-testing

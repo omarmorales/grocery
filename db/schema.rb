@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160713043739) do
+ActiveRecord::Schema.define(version: 20160715054840) do
 
   create_table "attachments", force: :cascade do |t|
     t.integer  "product_id"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(version: 20160713043739) do
     t.integer  "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "my_payments", force: :cascade do |t|
+    t.string   "email"
+    t.string   "ip"
+    t.string   "status"
+    t.decimal  "fee",        precision: 6, scale: 2
+    t.string   "paypal_id"
+    t.decimal  "total",      precision: 8, scale: 2
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "products", force: :cascade do |t|
