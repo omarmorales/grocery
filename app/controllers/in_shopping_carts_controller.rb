@@ -1,7 +1,9 @@
 class InShoppingCartsController < ApplicationController
-	def create 
-		#add to a shopping_cart
-		in_shopping_cart = InShoppingCart.new(product_id: params[:product_id],shopping_cart: @shopping_cart)
+	def create
+		#Agregar a un carrito de compra
+		in_shopping_cart = InShoppingCart.new(product_id: params[:product_id],
+																		shopping_cart: @shopping_cart)
+
 		if in_shopping_cart.save
 			redirect_to carrito_path, notice: "Guardamos el producto en tu carrito"
 		else
@@ -10,7 +12,7 @@ class InShoppingCartsController < ApplicationController
 	end
 
 	def destroy
-		#eliminate from shopping_cart
+		#Eliminar de un carrito de compra
 		@in_shopping_cart = InShoppingCart.find(params[:id])
 
 		@in_shopping_cart.destroy
