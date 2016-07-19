@@ -3,7 +3,7 @@
 # Table name: shopping_carts
 #
 #  id         :integer          not null, primary key
-#  status     :integer          default(0)
+#  status     :integer          default("default")
 #  ip         :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -20,4 +20,17 @@ RSpec.describe ShoppingCart, type: :model do
   		expect(shopping_cart.status).to eq("payed")
   	end
   end
+
+  describe "#total" do
+  	it "returns the total cost of the shopping_cart" do
+	  	shopping_cart = FactoryGirl.create(:shopping_cart)
+	  	product = FactoryGirl.create_list(:product,5)
+	  	products.each do |product|
+	  		FactoryGirl.create(:in_shopping_cart,product: product, shopping_cart: shopping_cart)
+	  	end
+
+	  	expect(shopping_cart.total).to eq(products.first.pricing * 5)
+  	end
+  end
+
 end
